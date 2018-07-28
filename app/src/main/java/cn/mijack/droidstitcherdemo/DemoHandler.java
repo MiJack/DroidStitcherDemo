@@ -12,13 +12,6 @@ import static cn.mijack.droidstitcherdemo.HandlerTestActivity.CODE;
 public class DemoHandler extends Handler {
     @Override
     public void handleMessage(Message msg) {
-        switch (msg.what) {
-            case CODE:
-                System.out.println("get a code");
-                return;
-            default:
-                System.out.println("get a message");
-
-        }
+        if (msg.what==CODE){System.out.println("get a code");}else {System.out.println("get a message");}
     }
 }
