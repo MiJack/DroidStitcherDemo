@@ -7,6 +7,6 @@ package cn.mijack.droidstitcherdemo;
 public class DemoRunnable implements Runnable {
     @Override
     public void run() {
-        System.out.println("demo");
+        com.mijack.Xlog.logMethodEnter("void cn.mijack.droidstitcherdemo.DemoRunnable.run()",this);try{System.out.println("demo");com.mijack.Xlog.logMethodExit("void cn.mijack.droidstitcherdemo.DemoRunnable.run()",this);}catch(Throwable throwable){com.mijack.Xlog.logMethodExitWithThrowable("void cn.mijack.droidstitcherdemo.DemoRunnable.run()",this,throwable);throw throwable;}
     }
 }

@@ -15,32 +15,32 @@ public class HandlerTestActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        com.mijack.Xlog.logMethodEnter("void cn.mijack.droidstitcherdemo.HandlerTestActivity.onCreate(android.os.Bundle)",this,savedInstanceState);try{super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Handler handler = new DemoHandler();
-// "android.os.Handler post java.lang.Runnable",
+/*// "android.os.Handler post java.lang.Runnable",*/
         handler.post(new DemoRunnable());
-//  "android.os.Handler postAtTime java.lang.Runnable long",
+/*//  "android.os.Handler postAtTime java.lang.Runnable long",*/
         handler.postAtTime(new DemoRunnable(), 10);
-//  "android.os.Handler postAtTime java.lang.Runnable java.lang.Object long",
+/*//  "android.os.Handler postAtTime java.lang.Runnable java.lang.Object long",*/
         handler.postAtTime(new DemoRunnable(), new Object(), 10);
-//  "android.os.Handler postDelayed java.lang.Runnable long",
+/*//  "android.os.Handler postDelayed java.lang.Runnable long",*/
         handler.postDelayed(new DemoRunnable(), 10);
-//  "android.os.Handler postAtFrontOfQueue java.lang.Runnable",
+/*//  "android.os.Handler postAtFrontOfQueue java.lang.Runnable",*/
         handler.postAtFrontOfQueue(new DemoRunnable());
-//  "android.os.Handler sendMessage android.os.Message",
+/*//  "android.os.Handler sendMessage android.os.Message",*/
         handler.sendMessage(Message.obtain(handler, new DemoRunnable()));
-//  "android.os.Handler sendEmptyMessage int",
+/*//  "android.os.Handler sendEmptyMessage int",*/
         handler.sendEmptyMessage(CODE);
-//  "android.os.Handler sendEmptyMessageDelayed int long",
+/*//  "android.os.Handler sendEmptyMessageDelayed int long",*/
         handler.sendEmptyMessageDelayed(CODE, 100);
-//  "android.os.Handler sendEmptyMessageAtTime int long",
+/*//  "android.os.Handler sendEmptyMessageAtTime int long",*/
         handler.sendEmptyMessageAtTime(CODE, 100);
-//  "android.os.Handler sendMessageDelayed android.os.Message long",
+/*//  "android.os.Handler sendMessageDelayed android.os.Message long",*/
         handler.sendMessageDelayed(Message.obtain(handler, new DemoRunnable()), 100);
-//  "android.os.Handler sendMessageAtTime android.os.Message long",
+/*//  "android.os.Handler sendMessageAtTime android.os.Message long",*/
         handler.sendMessageAtTime(Message.obtain(handler, new DemoRunnable()), 1000);
-//  "android.os.Handler sendMessageAtFrontOfQueue android.os.Message"
-        handler.sendMessageAtFrontOfQueue(Message.obtain(handler, new DemoRunnable()));
+/*//  "android.os.Handler sendMessageAtFrontOfQueue android.os.Message"*/
+        handler.sendMessageAtFrontOfQueue(Message.obtain(handler, new DemoRunnable()));com.mijack.Xlog.logMethodExit("void cn.mijack.droidstitcherdemo.HandlerTestActivity.onCreate(android.os.Bundle)",this);}catch(Throwable throwable){com.mijack.Xlog.logMethodExitWithThrowable("void cn.mijack.droidstitcherdemo.HandlerTestActivity.onCreate(android.os.Bundle)",this,throwable);throw throwable;}
     }
 }
